@@ -42,7 +42,7 @@ function commands(input) {
         case 'end':
             return console.log('finished');
             break;
-        default:
+        default: console.log('Error: invalid command');
             break;
     }
     // return arr.join(' ');
@@ -57,6 +57,7 @@ commands('count alpha');
 commands('sort');
 commands('end');
 commands('insert 1 ins');
+commands('END');
 // commands('insert -1 ins');
 
 
