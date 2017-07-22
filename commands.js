@@ -5,7 +5,7 @@ let functionDelete = require('./deleteFunc').deleteFunc;
 let sort = require('./sortFunc').sortFuncion;
 let count = require('./countFunc').count;
 arr = ['alpha', 'beta', 'gamma'];
-// console.log(arr.join(' '));
+console.log(arr.join(' '));
 
 function commands(input) {
 
