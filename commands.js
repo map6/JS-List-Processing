@@ -2,8 +2,9 @@ let append = require('./append').append;
 let prepend = require('./prepend').prepend;
 let functionDelete = require('./deleteFunc').deleteFunc;
 let sort = require('./sortFunc').sortFuncion;
+let count = require('./countFunc').count;
 arr = ['alpha', 'beta', 'gamma'];
-
+// console.log(arr.join(' '));
 function commands(input) {
 
 
@@ -29,6 +30,7 @@ function commands(input) {
             functionDelete(arr,command[1]);
             break;
         case 'count':
+            count(arr,command[1]);
             break;
         case 'end':
             return 'finished';
@@ -40,11 +42,11 @@ function commands(input) {
 }
 
 
-console.log(commands('append delta'));
-console.log(commands('prepend 00'));
-console.log(commands('delete 2'));
+commands('append delta');
+commands('prepend 00');
+commands('count alpha');
 
-console.log(commands('sort'));
+commands('sort');
 
 
 

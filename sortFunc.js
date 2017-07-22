@@ -1,5 +1,6 @@
 
 function sortFuncion(arr) {
-    arr.sort((a,b) => a-b);
+    arr =  arr.sort((a,b) => a-b);
+    console.log(arr.join(' '));
 }
 module.exports = {sortFuncion};
