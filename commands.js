@@ -1,7 +1,7 @@
 let append = require('./append').append;
 let prepend = require('./prepend').prepend;
 let functionDelete = require('./deleteFunc').deleteFunc;
-
+let sort = require('./sortFunc').sortFuncion;
 arr = ['alpha', 'beta', 'gamma'];
 
 function commands(input) {
@@ -23,6 +23,7 @@ function commands(input) {
         case 'roll':
             break;
         case 'sort':
+            sort(arr);
             break;
         case 'delete':
             functionDelete(arr,command[1]);
@@ -43,7 +44,7 @@ console.log(commands('append delta'));
 console.log(commands('prepend 00'));
 console.log(commands('delete 2'));
 
-console.log(commands('end'));
+console.log(commands('sort'));
 
 
 
