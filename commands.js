@@ -1,10 +1,15 @@
 let append = require('./append').append;
 let prepend = require('./prepend').prepend;
 let insert = require('./insert').insert;
-
-let arr = ['alpha', 'beta', 'gamma'];
+let functionDelete = require('./deleteFunc').deleteFunc;
+let sort = require('./sortFunc').sortFuncion;
+let count = require('./countFunc').count;
+arr = ['alpha', 'beta', 'gamma'];
+// console.log(arr.join(' '));
 
 function commands(input) {
+
+    // let arr = ['alpha', 'beta', 'gamma'];
 
     let command = input.split(' ');
 
@@ -26,8 +31,13 @@ function commands(input) {
         case 'roll':
             break;
         case 'sort':
+            sort(arr);
+            break;
+        case 'delete':
+            functionDelete(arr,command[1]);
             break;
         case 'count':
+            count(arr,command[1]);
             break;
         case 'end':
             return console.log('finished');
@@ -41,6 +51,10 @@ function commands(input) {
 
 commands('append delta');
 commands('prepend 00');
+commands('delete 0');
+commands('count alpha');
+
+commands('sort');
 commands('end');
 commands('insert 1 ins');
 // commands('insert -1 ins');
