@@ -1,9 +1,10 @@
 let append = require('./append').append;
 let prepend = require('./prepend').prepend;
+let insert = require('./insert').insert;
+
+let arr = ['alpha', 'beta', 'gamma'];
 
 function commands(input) {
-
-    let arr = ['alpha', 'beta', 'gamma'];
 
     let command = input.split(' ');
 
@@ -17,6 +18,10 @@ function commands(input) {
         case 'reverse':
             break;
         case 'insert':
+            // if (command[1] >= arr.length || command[1] < 0) {
+            //     throw new Error(`Invalid index ${command[1]}`);
+            // }
+            insert(arr, command[1], command[2]);
             break;
         case 'roll':
             break;
@@ -25,18 +30,20 @@ function commands(input) {
         case 'count':
             break;
         case 'end':
-            return 'finished';
+            return console.log('finished');
             break;
         default:
             break;
     }
-    return arr.join(' ');
+    // return arr.join(' ');
 }
 
 
-console.log(commands('append delta'));
-console.log(commands('prepend 00'));
-console.log(commands('end'));
+commands('append delta');
+commands('prepend 00');
+commands('end');
+commands('insert 1 ins');
+// commands('insert -1 ins');
 
 
 
