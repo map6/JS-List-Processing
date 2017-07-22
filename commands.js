@@ -44,6 +44,7 @@ function commands(input) {
 
 commands('append delta');
 commands('prepend 00');
+commands('delete 0');
 commands('count alpha');
 
 commands('sort');
