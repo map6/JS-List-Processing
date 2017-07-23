@@ -4,6 +4,8 @@ let insert = require('./insert').insert;
 let functionDelete = require('./deleteFunc').deleteFunc;
 let sort = require('./sortFunc').sortFuncion;
 let count = require('./countFunc').count;
+let roll = require('./roll').roll;
+let reverse = require('./reverse').reverse;
 arr = ['alpha', 'beta', 'gamma'];
 console.log(arr.join(' '));
 
@@ -21,6 +23,7 @@ function commands(input) {
             prepend(arr, command[1]);
             break;
         case 'reverse':
+            reverse(arr);
             break;
         case 'insert':
             // if (command[1] >= arr.length || command[1] < 0) {
@@ -29,6 +32,7 @@ function commands(input) {
             insert(arr, command[1], command[2]);
             break;
         case 'roll':
+            roll(arr, command[1]);
             break;
         case 'sort':
             sort(arr);
